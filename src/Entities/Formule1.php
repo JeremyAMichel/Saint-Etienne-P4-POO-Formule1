@@ -2,14 +2,14 @@
 
 class Formule1{
 
-    private $speed = 0;
+    private int $speed = 0;
 
-    public function drive()
+    public function drive(): string
     {
         return "Vroom vroom à {$this->speed} km/h <br>";
     }
 
-    public function shiftGear($nombre)
+    public function shiftGear(int $nombre): self
     {
         $this->speed += $nombre;
         return $this;
